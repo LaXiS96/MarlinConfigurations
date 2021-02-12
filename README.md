@@ -23,6 +23,12 @@ Taken from Creality official source code, only for reference.
 default_envs = LPC1768
 ```
 
+[LV8729 module](https://www.aliexpress.com/item/32949865010.html)
+
+    I=Vref/(Rs*5), Rs=0.22Ohm, Imax=1.8A
+    Set 0.88V for 800mA
+    Pull only MS3 high for 1/16 microstepping
+
 ### skr14_manufacturer
 
 Taken from BIGTREETECH official source code, only for reference.
