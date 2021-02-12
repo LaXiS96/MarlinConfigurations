@@ -9,6 +9,18 @@ Configurations are updated to the latest available [MarlinFirmware/Configuration
 
 To update an existing git cloned Configurations repository: `git reset --hard origin/bugfix-2.0.x` (could also work with a soft reset)
 
+## My Ender-3 V2 mods
+
+Installed:
+- Stock Creality 4.2.2 Silent mainboard replaced with BIGTREETECH SKR V1.4 including TMC2208 modules for all axes (also experimenting with different drivers for the extruder)
+- Stock display replaced with standard RepRapDiscount Full Graphic Smart Controller
+- Trianglelab 3D Touch (BLTOUCH clone) (TODO: add bracket adapter link)
+- Aluminium extruder assembly
+- Capricorn Bowden tube
+
+Upcoming:
+- Dual Z-axis: additional stepper and lead screw
+
 ## Configurations
 
 ### creality422
