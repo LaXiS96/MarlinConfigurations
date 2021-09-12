@@ -11,15 +11,12 @@ To update an existing git cloned Configurations repository: `git reset --hard or
 
 ## My Ender-3 V2 mods
 
-Installed:
-- Stock Creality 4.2.2 Silent mainboard replaced with BIGTREETECH SKR V1.4 including TMC2208 modules for all axes (also experimenting with different drivers for the extruder)
-- Stock display replaced with standard RepRapDiscount Full Graphic Smart Controller
-- Trianglelab 3D Touch (BLTOUCH clone) (TODO: add bracket adapter link)
+- Stock Creality 4.2.2 Silent mainboard replaced with BIGTREETECH SKR V1.4 and a mix of stepper drivers
+- Stock display replaced with standard RepRapDiscount Full Graphic Smart Controller (even though there is now official MarlinUI support for the stock DWIN display)
+- Trianglelab 3D Touch (BLTouch clone) with this mount: https://www.thingiverse.com/thing:4462870
 - Aluminium extruder assembly
 - Capricorn Bowden tube
-
-Upcoming:
-- Dual Z-axis: additional stepper and lead screw
+- Dual Z-axis: additional stepper motor and lead screw
 
 ## Configurations
 
