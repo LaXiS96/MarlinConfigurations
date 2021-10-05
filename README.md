@@ -26,7 +26,7 @@ Taken from Creality official source code, only for reference.
 
 ### skr14_lv8729extr
 
-[BIGTREETECH SKR V1.4](https://github.com/bigtreetech/BIGTREETECH-SKR-V1.3/tree/master/BTT%20SKR%20V1.4/) with TMC2208 drivers in UART mode for X Y Z axes and LV8729 for E0.
+[BIGTREETECH SKR V1.4](https://github.com/bigtreetech/BIGTREETECH-SKR-V1.3/tree/master/BTT%20SKR%20V1.4/) with TMC2208 drivers in UART mode for X Y Z and LV8729 for E0.
 
 ```ini
 default_envs = LPC1768
@@ -45,6 +45,8 @@ Taken from BIGTREETECH official source code, only for reference.
 ### skr14_tmc2208
 
 [BIGTREETECH SKR V1.4](https://github.com/bigtreetech/BIGTREETECH-SKR-V1.3/tree/master/BTT%20SKR%20V1.4/) with TMC2208 drivers in UART mode for X Y Z E0.
+
+BLTouch probe wires (black and white) must be connected in place of the Z endstop instead of the "Probe" header. Black is GND and white is signal.
 
 ```ini
 default_envs = LPC1768
