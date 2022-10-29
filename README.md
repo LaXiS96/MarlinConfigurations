@@ -20,6 +20,8 @@ To update an existing git cloned Configurations repository: `git reset --hard or
 
 ## Configurations
 
+My current configuration: skr14_tmc2208
+
 ### creality422
 
 Taken from Creality official source code, only for reference.
