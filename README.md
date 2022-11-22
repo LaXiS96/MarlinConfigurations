@@ -1,18 +1,19 @@
+# These configurations are untested, I have switched to Klipper
+
 # Marlin Configurations
 
-[MarlinFirmware/Marlin@bugfix-2.0.x](https://github.com/MarlinFirmware/Marlin/tree/bugfix-2.0.x) configuration files for my modded Creality Ender-3 V2.
+[MarlinFirmware/Marlin v2.1.1](https://github.com/MarlinFirmware/Marlin/releases/tag/2.1.1) configuration files for my modded Creality Ender-3 V2.
 
 **Disclaimer:** do not blindly use these files for your Marlin build, they are set up for my modded printer and will at best not work on yours.
 Only use them as reference for your own customization and don't come blame me if your printer breaks or your house burns down.
 
-Configurations are updated to the latest available [MarlinFirmware/Configurations@bugfix-2.0.x](https://github.com/MarlinFirmware/Configurations/tree/bugfix-2.0.x) on the day of the commit, from the `config\examples\Creality\Ender-3 V2` example configuration.
-
-To update an existing git cloned Configurations repository: `git reset --hard origin/bugfix-2.0.x` (could also work with a soft reset)
+Configurations are based on the `config/examples/Creality/Ender-3 V2/CrealityV422/MarlinUI` example.
 
 ## My Ender-3 V2 mods
 
 - Stock Creality 4.2.2 Silent mainboard replaced with BIGTREETECH SKR V1.4 and a mix of stepper drivers
-- Stock display replaced with standard RepRapDiscount Full Graphic Smart Controller (even though there is now official MarlinUI support for the stock DWIN display)
+- Stock display replaced with standard RepRapDiscount Full Graphic Smart Controller (even though there is now official UI support for the stock DWIN display)
+    - TODO: find way to connect original display to SKR board and use new Marlin UI
 - Trianglelab 3D Touch (BLTouch clone) with this mount: https://www.thingiverse.com/thing:4462870
 - Aluminium extruder assembly
 - Capricorn Bowden tube
@@ -20,7 +21,14 @@ To update an existing git cloned Configurations repository: `git reset --hard or
 
 ## Configurations
 
-My current configuration: skr14_tmc2208
+My current configuration: skr14_lv8729extr
+
+BLTouch probe wires (black and white) must be connected in place of the Z endstop instead of the "Probe" header. Black is GND and white is signal.
+
+To build for [BIGTREETECH SKR V1.4](https://github.com/bigtreetech/BIGTREETECH-SKR-V1.3/tree/master/BTT%20SKR%20V1.4/), change in `platformio.ini`:
+```ini
+default_envs = LPC1768
+```
 
 ### creality422
 
@@ -28,11 +36,7 @@ Taken from Creality official source code, only for reference.
 
 ### skr14_lv8729extr
 
-[BIGTREETECH SKR V1.4](https://github.com/bigtreetech/BIGTREETECH-SKR-V1.3/tree/master/BTT%20SKR%20V1.4/) with TMC2208 drivers in UART mode for X Y Z and LV8729 for E0.
-
-```ini
-default_envs = LPC1768
-```
+SKR V1.4 with TMC2208 drivers in UART mode for X Y Z and LV8729 for E0.
 
 [LV8729 module](https://www.aliexpress.com/item/32949865010.html)
 
@@ -46,10 +50,4 @@ Taken from BIGTREETECH official source code, only for reference.
 
 ### skr14_tmc2208
 
-[BIGTREETECH SKR V1.4](https://github.com/bigtreetech/BIGTREETECH-SKR-V1.3/tree/master/BTT%20SKR%20V1.4/) with TMC2208 drivers in UART mode for X Y Z E0.
-
-BLTouch probe wires (black and white) must be connected in place of the Z endstop instead of the "Probe" header. Black is GND and white is signal.
-
-```ini
-default_envs = LPC1768
-```
+SKR V1.4 with TMC2208 drivers in UART mode for X Y Z E0.
